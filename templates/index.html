@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DysDetect</title>
+    <link rel="stylesheet" type="text/css" href="/static/style1.css" />
+  </head>
+  <body>
+    <!-- Main container for the game -->
+    <div class="main">
+      <!-- Container for the title and score display -->
+      <div class="title">
+        <!-- Main game title -->
+        <h1>DysDetect Game</h1>
+        <!-- Display the current score -->
+        <h2 id="scoreDisplay">: 0</h2>
+        <h2 id="wrongDisplay">: 0</h2>
+        <!-- Display and control the game timer -->
+        <div class="time-bar-container">
+          <div class="time-bar"></div>
+        </div>
+        <button id="timerDisplay" disabled>Timer: 15 sec</button>
+      </div>
+      <br>
+      <!-- Container for the game blocks (cues) -->
+      <div class="blocks">
+        <!-- Individual block (cue) elements with unique IDs -->
+        <div class="block" id="block-1"></div>
+        <div class="block" id="block-2"></div>
+        <div class="block" id="block-3"></div>
+        <div class="block" id="block-4"></div>
+      </div>
+      <!-- Next Round Button -->
+      <button id="nextRoundButton">Next Round</button>
+      <audio id="correctSound" src="static/correct_sound.wav"></audio>
+      <audio id="wrongSound" src="static/wrong_sound.wav"></audio>
+    </div>
+  </body>
+  <script src="/static/scripts/script.js"></script>
+</html>

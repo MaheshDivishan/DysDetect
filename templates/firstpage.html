@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DysDetect</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles/style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Welcome to the DysDetect Game!</h1>
+      <br />
+      <br />
+      <br />
+      <select id="ageDropdown">
+        <option value="">Select your age</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <!-- Add more options as needed --></select
+      ><br />
+      <br />
+      <br />
+      <button id="playButton">Play Game</button>
+    </div>
+
+    <script>
+      var age = document.getElementById("ageDropdown").value
+      function sendage(age) {
+        const jsonData = JSON.stringify(age);
+        fetch("/play_game", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: jsonData,
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            console.log(data);
+          })
+          .catch((error) => {
+            console.error("Error sending data:", error);
+          });
+      }
+      document
+        .getElementById("playButton")
+        .addEventListener("click", function () {
+          var age = document.getElementById("ageDropdown").value;
+          if (age !== "") {
+            sendage(age);
+            // Redirect to another page (assuming it's named game.html)
+            window.location.href = "index.html";
+          }
+        });
+    </script>
+  </body>
+</html>

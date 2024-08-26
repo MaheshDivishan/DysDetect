@@ -1,0 +1,187 @@
+body {
+    background-color: #f0f0f0; /* Green background color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Make the body take the full height of the viewport */
+    height: 100vh;
+    margin: 0; /* Remove default margin */
+    color: #ffffff; /* White text color */
+    background-image: url('/static/index.png');
+  }
+  .main {
+    text-align: center; /* Center align the content */
+  }
+  .title h1 {
+    text-align: center;
+    font-size: 50px;
+    text-transform: uppercase;
+    color: #000; /* Change font color to black */
+    letter-spacing: 1px;
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    border-bottom: 3px solid red; /* Add red border to the top */
+    padding-top: 20px; /* Adjust top padding for spacing */
+    background-color: #f0f0f0; /* Set background color to white */
+    margin-top: 0; /* Remove default margin */
+  }
+
+  .title h1 span {
+    font-size: 15px;
+    color: #000; /* Change font color to black */
+    word-spacing: 1px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-template-rows: 27px 0;
+    grid-gap: 20px;
+    align-items: center;
+    background-color: #000; /* Set background color to black */
+    color: #fff; /* Set font color to white */
+    padding: 10px; /* Add padding for better appearance */
+  }
+
+  .title h1 span:after,
+  .title h1 span:before {
+    content: " ";
+    display: block;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    height: 50px;
+    background-color: #f8f8f8;
+  }
+
+  h1 {
+    font-size: 60px; /* Increase the font size */
+    /* color: #fffff; Dark green text color */
+  }
+  #timerDisplay {
+    font-size: 20px; /* Increase the font size */
+    padding: 10px;
+    color: #8bc34a; /* Light green text color */
+    background-color: #333; /* Dark gray background */
+    border: none; /* Remove the border */
+    border-radius: 5px; /* Add some border radius */
+    margin-top: 10px; /* Add some space at the top */
+  }
+
+  .blocks {
+    background-color: white; /* Medium green background color */
+    display: grid;
+    grid-template-columns: repeat(
+      2,
+      150px
+    ); /* 2 columns, each 150px wide */
+    grid-template-rows: repeat(2, 150px); /* 2 rows, each 150px tall */
+    gap: 10px;
+    border: 2px solid #646262; /* Green border */
+    padding: 20px;
+    border-radius: 10px;
+    justify-content: center; /* Center elements horizontally */
+    align-items: center; /* Optionally, center vertically if needed */
+  }
+
+  .block {
+    width: 150px; /* Width of each block */
+    height: 150px; /* Height of each block */
+    background: white; /* Green background color */
+    border: 3px solid black; /* Dark green border */
+    cursor: pointer;
+    /* border-radius: 20px; Increase border radius */
+    margin: 5px; /* Add a small gap between blocks */
+    /* Add transition effect on background change */
+    transition: background 0.3s;
+  }
+
+  /* CSS styling for the target cue */
+  .target {
+    /* Set the background size to cover, making sure 
+        the background image covers the entire element */
+    background-size: cover;
+
+    /* Set the background image using the 
+        specified URL for the target cue */
+    background-image: url("/static/4.png");
+  }
+  .distractor1 {
+    /* Set the background size to cover, making sure 
+        the background image covers the entire element */
+    background-size: cover;
+
+    /* Set the background image using the 
+        specified URL for the target cue */
+    background-image: url("/static/1.png");
+  }
+  .distractor2 {
+    /* Set the background size to cover, making sure 
+        the background image covers the entire element */
+    background-size: cover;
+
+    /* Set the background image using the 
+        specified URL for the target cue */
+    background-image: url("/static/2.png");
+  }
+  .distractor3 {
+    /* Set the background size to cover, making sure 
+        the background image covers the entire element */
+    background-size: cover;
+
+    /* Set the background image using the 
+        specified URL for the target cue */
+    background-image: url("/static/3.png");
+  }
+  /* Styling for the Next Round button */
+  #nextRoundButton {
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: #007bff; /* Blue background color */
+    color: #ffffff; /* White text color */
+    border: none;
+    border-radius: 5px;
+    justify-content: center;
+    cursor: pointer;
+    margin-top: 20px;
+    display: none; /* Hide initially */
+  }
+  /* Time bar container */
+  .time-bar-container {
+    width: 100%;
+    height: 20px; /* Adjust height as needed */
+    background-color: #ddd; /* Background color of the time bar container */
+    border-radius: 5px; /* Rounded corners */
+    margin-top: 10px; /* Adjust spacing as needed */
+  }
+
+  /* Time bar */
+  .time-bar {
+    height: 100%;
+    background-color: #4caf50; /* Color of the time bar */
+    border-radius: 5px; /* Rounded corners */
+    transition: width 1s linear; /* Smooth transition for width changes */
+  }
+
+  /* Timer display */
+  #timerDisplay {
+    margin-top: 10px; /* Adjust spacing as needed */
+  }
+  .title h2 {
+    display: inline-block; /* Ensure the check mark and text are inline */
+    margin-right: 10px; /* Add some space between the check mark and text */
+    font-size: 18px; /* Adjust the font size as needed */
+    color: #333; /* Change the color of the text */
+  }
+
+  .title h2::before {
+    content: "\2713"; /* Unicode for check mark symbol */
+    margin-right: 5px; /* Add some space between the check mark and text */
+    color: green; /* Change the color of the check mark */
+  }
+  #wrongDisplay::before {
+    content: "\2717"; /* Unicode for cross mark symbol */
+    color: red;
+  }

@@ -1,0 +1,62 @@
+body {
+  /* Set background image */
+  background-image: url('/static/styles/Home.png');
+
+}
+
+
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+h1 {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+#ageDropdown {
+    /* Foundation styles */
+    padding: 10px;
+    font-size: 16px;
+    border: 3px solid #4CAF50; /* Lighter border for cleaner look */
+    border-radius: 5px; /* Subtler curve for improved readability */
+    background-color: #fff; /* White background for better contrast */
+    margin-bottom: 20px;
+  
+    /* Enhanced styling and accessibility */
+    box-sizing: border-box; /* Ensures content size respects padding */
+    appearance: none; /* Removes default browser styling */
+    -webkit-appearance: none; /* For WebKit browsers */
+    outline: none; /* Removes default focus outline */
+  
+    /* Hover and focus effects */
+    &:hover {
+      border-color: #ccc; /* Slightly darker border on hover */
+      cursor: pointer; /* Indicate interactivity */
+    }
+  
+    &:focus {
+      border-color: #999; /* Highlight border on focus */
+      box-shadow: 0 0 3px rgba(0, 0, 0, 0.1); /* Subtle focus shadow */
+    }
+  
+    width: 150px; /* Adjust as needed */
+  
+
+  }
+#playButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#playButton:hover {
+    background-color: #45a049;
+}
+
